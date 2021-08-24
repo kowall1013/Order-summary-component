@@ -1,0 +1,15 @@
+body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+}
+
+.container {
+  margin-left: var(--mr-small);
+  margin-right: var(--mr-small);
+}
+
+.button {
+  border: none;
+}

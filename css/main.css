@@ -1,0 +1,168 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --clr-primary-pale-blue: #1F2E55;
+  --clr-primary-bright-blue: hsl(245, 75%, 52%);
+  --clr-neutral-pale-blue: #717FA6;
+  --clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-neutral-dark-blue: hsl(223, 47%, 23%)
+  --fs-main: 16px;
+  --ff-primary:"Red Hat Display", sans-serif;
+  --br-primary: 1rem;
+  --mr-small:1.5rem;
+  --mr-medium:1.875rem;
+  --mr-big:2.5rem;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+}
+
+.container {
+  margin-left: var(--mr-small);
+  margin-right: var(--mr-small);
+}
+
+.button {
+  border: none;
+}
+
+.card {
+  margin: 4.4375rem 1.5em;
+  max-width: 20.43rem;
+  text-align: center;
+}
+.card header {
+  border-radius: var(--br-primary) var(--br-primary) 0 0;
+  background-image: url(../../images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 10rem;
+}
+.card__description h2 {
+  margin: var(--mr-small) 0;
+  color: var(--clr-primary-pale-blue);
+  font-weight: 800;
+}
+.card__description p {
+  color: var(--clr-neutral-pale-blue);
+}
+.card__paymants {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "music price change" "payment payment payment" "order order order";
+  margin-top: var(--mr-medium);
+}
+.card__paymants img {
+  grid-area: music;
+}
+.card__paymants-price {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  grid-area: price;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  margin-bottom: var(--mr-medium);
+}
+.card__paymants-price p {
+  color: var(--clr-neutral-pale-blue);
+}
+.card__paymants .button--change {
+  grid-area: change;
+  font-weight: 400;
+  color: var(--clr-primary-bright-blue);
+}
+.card__paymants .button--proceed {
+  grid-area: payment;
+  background-color: var(--clr-primary-bright-blue);
+  padding: 0.8rem 3rem;
+  border-radius: var(--br-primary);
+  color: #fff;
+  font-weight: 700;
+}
+.card__paymants .button--cancel {
+  grid-area: order;
+  margin-top: var(--mr-medium);
+  color: var(--clr-neutral-pale-blue);
+}
+
+/*# sourceMappingURL=main.css.map */

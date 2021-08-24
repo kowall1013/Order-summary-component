@@ -1,0 +1,78 @@
+// sass --watch scss/main.scss:css/main.css
+.card {
+  margin: 4.4375rem 1.5em;
+  max-width: 20.43rem;
+  text-align: center;
+
+  header {
+    border-radius: var(--br-primary)var(--br-primary)0 0;
+    background-image: url(../../images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 10rem;
+  }
+
+  &__description h2 { 
+    margin: var(--mr-small) 0;
+    color: var(--clr-primary-pale-blue);
+    font-weight: 800;
+  }
+
+  &__description p { 
+    color: var(--clr-neutral-pale-blue);
+  }
+
+  &__paymants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "music price change"
+    "payment payment payment"
+    "order order order";
+    margin-top: var(--mr-medium);
+
+    img {
+      grid-area: music;
+      // justify-self: center;
+    }
+
+    &-price {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      grid-area: price;
+      margin-left: .3rem;
+      margin-right: .3rem;
+      margin-bottom: var(--mr-medium);
+
+      p {
+        color: var(--clr-neutral-pale-blue);
+      }
+    }
+
+    .button--change {
+      grid-area:change;
+      font-weight: 400;
+      color: var(--clr-primary-bright-blue);
+    }
+
+    .button--proceed {
+      grid-area:payment;
+      background-color: var(--clr-primary-bright-blue);
+      padding: 0.8rem 3rem;
+      border-radius: var(--br-primary);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .button--cancel {
+      grid-area:order;
+      margin-top: var(--mr-medium);
+      color: var(--clr-neutral-pale-blue);
+    }
+  }
+}
